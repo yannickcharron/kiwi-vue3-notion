@@ -5,13 +5,13 @@
   "homepage": "https://github.com/yannickcharron/kiwi-vue3-notion",
   "repository": "github:yannickcharron/kiwi-vue3-notion",
   "type": "module",
-  "main": "./dist/vue3-notion.umd.cjs",
-  "module": "./dist/vue3-notion.js",
+  "main": "./dist/kiwi-vue3-notion.umd.cjs",
+  "module": "./dist/kiwi-vue3-notion.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/vue3-notion.js",
-      "require": "./dist/vue3-notion.umd.cjs"
+      "import": "./dist/kiwi-vue3-notion.js",
+      "require": "./dist/kiwi-vue3-notion.umd.cjs"
     },
     "./nuxt": {
       "require": "./nuxt/index.ts",
