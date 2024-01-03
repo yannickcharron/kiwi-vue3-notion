@@ -1174,6 +1174,16 @@ katex@^0.15.1:
   dependencies:
     commander "^8.0.0"
 
+"kiwi-vue3-notion@file:":
+  version "0.1.46"
+  resolved "file:"
+  dependencies:
+    "@wdns/vue-code-block" "^2.3.1"
+    katex "^0.15.1"
+    kiwi-vue3-notion "file:"
+    prismjs "^1.25.0"
+    vue "^3.2.20"
+
 knitwork@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/knitwork/-/knitwork-1.0.0.tgz"
