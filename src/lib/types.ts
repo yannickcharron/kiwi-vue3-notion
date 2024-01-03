@@ -83,6 +83,8 @@ export type NotionBlockProps = {
   pageLinkOptions?: PageLinkOptions
   pageLinkTarget: string
   prism: boolean
+  codeBlock: boolean
+  codeBlockTheme: string
   katex: boolean
   textLinkTarget: string
 }

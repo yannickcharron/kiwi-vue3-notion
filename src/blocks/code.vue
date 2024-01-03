@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Prism from "prismjs";
 import PrismBlock from "./helpers/prism.vue";
+import CodeBlock from "@wdns/vue-code-block";
 import { useNotionBlock, defineNotionProps } from "../lib/blockable";
 import { computed } from "vue";
 
@@ -54,19 +55,37 @@ const supported = computed(() => {
 });
 
 const computedSlot = computed(() => properties.value?.title.map((i) => i?.[0]).join(""));
+
+const isCodeBlockEnabled = computed(() => {
+  return props.codeBlock || false; 
+});
+
+const codeBlockTheme = computed(() => {
+  return props.codeBlockTheme || "default"
+})
 </script>
 
 <script lang="ts">
+//https://webdevnerdstuff.github.io/vue-code-block/
 export default {
   name: "NotionCode",
 };
 </script>
 
 <template>
-  <div v-if="supported" :class="['notion-code']">
+  <div v-if="isCodeBlockEnabled" :class="['notion-code', 'kiwi-code']">
+    <CodeBlock :lang="lang" :code="computedSlot" highlightjs :theme="codeBlockTheme" />
+  </div>
+  <div v-else-if="supported" :class="['notion-code']">
     <PrismBlock :language="lang">{{ computedSlot }}</PrismBlock>
   </div>
   <div v-else :class="['notion-code']">
     <pre><div :class="langClass">{{ computedSlot }}</div></pre>
   </div>
+  <!-- <div v-if="supported" :class="['notion-code']">
+    <PrismBlock :language="lang">{{ computedSlot }}</PrismBlock>
+  </div>
+  <div v-else :class="['notion-code']">
+    <pre><div :class="langClass">{{ computedSlot }}</div></pre>
+  </div> -->
 </template>

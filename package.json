@@ -1,9 +1,9 @@
 {
-  "name": "vue3-notion",
-  "version": "0.1.45",
-  "description": "Vue 3 Unofficial Notion Renderer",
-  "homepage": "https://vue3-notion.vercel.app/",
-  "repository": "github:zernonia/vue3-notion",
+  "name": "kiwi-vue3-notion",
+  "version": "0.1.46",
+  "description": "Vue 3 Kiwi Unofficial Notion Renderer",
+  "homepage": "https://github.com/yannickcharron/kiwi-vue3-notion",
+  "repository": "github:yannickcharron/kiwi-vue3-notion",
   "type": "module",
   "main": "./dist/vue3-notion.umd.cjs",
   "module": "./dist/vue3-notion.js",
@@ -44,9 +44,10 @@
     "deploy": "npm run build && npm version patch && npm publish"
   },
   "dependencies": {
+    "@wdns/vue-code-block": "^2.3.1",
     "katex": "^0.15.1",
     "prismjs": "^1.25.0",
-    "vue": "^3.2.26"
+    "vue": "^3.2.20"
   },
   "devDependencies": {
     "@nuxt/kit": "^3.4.3",

@@ -15,6 +15,8 @@ export const defineNotionProps = {
   pageLinkOptions: Object,
   pageLinkTarget: { type: String, default: "_self" },
   prism: { type: Boolean, default: false },
+  codeBlock: {type:Boolean, default: false },
+  codeBlockTheme: { type: String, default: "" },
   katex: { type: Boolean, default: false },
   textLinkTarget: { type: String, default: "_blank" },
 };
@@ -38,6 +40,8 @@ export const useNotionBlock = (props: Readonly<NotionBlockProps>) => {
       mapPageUrl: props.mapPageUrl,
       pageLinkOptions: props.pageLinkOptions,
       prism: props.prism,
+      codeBlock: props.codeBlock,
+      codeBlockTheme: props.codeBlockTheme,
       katex: props.katex,
     };
   });
